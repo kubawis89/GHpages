@@ -26,6 +26,9 @@ function App() {
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          <Route exact path="/GHpages/">
+            <Redirect to="/home" />
+          </Route>
           <Route exact path="/home">
             <Memes />
           </Route>
