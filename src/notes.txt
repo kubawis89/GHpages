@@ -1,19 +1,19 @@
 TO DO:
 
-1. GH Pages
-2. General CSS rules
-3. AddMeme styling
-4. Additional Meme component
-5. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
-6. Styled Header
-7. Styled Memes
-8. Styled Navigation
-9. README.MD
-10. AddMem height
+1. General CSS rules
+2. AddMeme styling
+3. Additional Meme component
+4. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
+5. Styled Header
+6. Styled Memes
+7. Styled Navigation
+8. README.MD
+9. AddMem height
 
 Done: 
 1. GlobalReducer map() instead of findIndex()
 2. Import CSS
+3. GH Pages
 
 
 
