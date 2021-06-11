@@ -64,14 +64,20 @@ function NarrowNavLinks(props) {
 
   return (
     <LinkContainer>
-      <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
+      <MenuToggle
+        isOpen={isOpen}
+        toggle={() => {
+          setOpen(!isOpen);
+          props.sendToggle(isOpen);
+        }}
+      />
       <div className={isOpen ? "nav-menu active" : "nav-menu"}>
         <LinkWrapper>
           <NavLink to="/home">
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Home
@@ -81,7 +87,7 @@ function NarrowNavLinks(props) {
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Hot
@@ -91,7 +97,7 @@ function NarrowNavLinks(props) {
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Regular
@@ -101,7 +107,7 @@ function NarrowNavLinks(props) {
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Poor
@@ -111,7 +117,7 @@ function NarrowNavLinks(props) {
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Favorite
@@ -121,7 +127,7 @@ function NarrowNavLinks(props) {
             <LinkItem
               onClick={() => {
                 setOpen(!isOpen);
-                props.sendToggle(!isOpen);
+                props.sendToggle(isOpen);
               }}
             >
               Add

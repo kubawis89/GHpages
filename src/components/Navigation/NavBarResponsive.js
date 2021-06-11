@@ -58,7 +58,7 @@ const ActivePath = styled.p`
 function NavBarResponsive(props) {
   const isMobile = useMediaQuery({ maxWidth: "680px" });
 
-  const [closeOrOpen, setCloseOrOpen] = useState(false);
+  const [isClose, setClose] = useState(true);
 
   const location = useLocation();
 
@@ -67,14 +67,10 @@ function NavBarResponsive(props) {
       {isMobile && (
         <NarrowScreen>
           <ActiveLinkSection>
-            {!closeOrOpen && (
-              <ActivePath>{location.pathname.substr(1)}</ActivePath>
-            )}
+            {isClose && <ActivePath>{location.pathname.substr(1)}</ActivePath>}
           </ActiveLinkSection>
           <ResponsiveMenuSection>
-            <NarrowNavLinks
-              sendToggle={(closeOrOpen) => setCloseOrOpen(closeOrOpen)}
-            />
+            <NarrowNavLinks sendToggle={(isClose) => setClose(isClose)} />
           </ResponsiveMenuSection>
         </NarrowScreen>
       )}

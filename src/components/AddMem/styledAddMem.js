@@ -241,6 +241,7 @@ export const AddContainer = styled.div`
     border-radius: 5px;
     min-width: 320px
     width: 100vp;
+    min-height: calc(100% - 388px);
     h1 {
       font-size: 20px;
       font-weight: 400;
@@ -358,6 +359,7 @@ export const Under320 = styled.div`
   width: 100%;
   height: 60vh;
   min-width: 100px;
+  min-height: calc(100% - 388px);
 
   @media only screen and (max-device-width: 319px) {
     display: inline-block;
