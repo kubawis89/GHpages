@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GHpages/static/css/main.cf5986c8.chunk.css",
+    "main.css": "/GHpages/static/css/main.7a2d3901.chunk.css",
     "main.js": "/GHpages/static/js/main.35b276c3.chunk.js",
     "main.js.map": "/GHpages/static/js/main.35b276c3.chunk.js.map",
     "runtime-main.js": "/GHpages/static/js/runtime-main.1a7da417.js",
@@ -10,13 +10,13 @@
     "static/js/3.1730aff0.chunk.js": "/GHpages/static/js/3.1730aff0.chunk.js",
     "static/js/3.1730aff0.chunk.js.map": "/GHpages/static/js/3.1730aff0.chunk.js.map",
     "index.html": "/GHpages/index.html",
-    "static/css/main.cf5986c8.chunk.css.map": "/GHpages/static/css/main.cf5986c8.chunk.css.map",
+    "static/css/main.7a2d3901.chunk.css.map": "/GHpages/static/css/main.7a2d3901.chunk.css.map",
     "static/js/2.49da2049.chunk.js.LICENSE.txt": "/GHpages/static/js/2.49da2049.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1a7da417.js",
     "static/js/2.49da2049.chunk.js",
-    "static/css/main.cf5986c8.chunk.css",
+    "static/css/main.7a2d3901.chunk.css",
     "static/js/main.35b276c3.chunk.js"
   ]
 }
