@@ -9,6 +9,7 @@ export const SocialsDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 
   @media only screen and (max-device-width: 319px) {
     margin: 0;

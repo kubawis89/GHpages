@@ -5,14 +5,14 @@ import {
   addUpvote,
   addDownvote,
   favoriteMem,
-} from "../../store/actions/globalActions";
+} from "../../../store/actions/globalActions";
 
-function PoorMemes() {
+function HotMemes() {
   const memDataFromState = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const hotMemList = memDataFromState.memes
-    .filter((mem) => mem.upvotes - mem.downvotes < 0)
+    .filter((mem) => mem.upvotes - mem.downvotes > 4)
     .map((filteredMem) => (
       <div key={filteredMem.id} className="memSection">
         <h2>{filteredMem.title}</h2>
@@ -130,4 +130,4 @@ function PoorMemes() {
   );
 }
 
-export default PoorMemes;
+export default HotMemes;

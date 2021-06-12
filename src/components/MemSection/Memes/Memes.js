@@ -5,7 +5,7 @@ import {
   addUpvote,
   addDownvote,
   favoriteMem,
-} from "../../store/actions/globalActions";
+} from "../../../store/actions/globalActions";
 import "./Memes.scss";
 
 function Memes() {

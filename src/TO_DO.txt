@@ -1,24 +1,19 @@
 TO DO:
-
-1. General CSS rules
-2. AddMeme styling
-3. Additional Meme component
-4. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
-5. Styled Header
+1. Additional Meme component
+2. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
+3. AddMem check
+4. Improve general css rules 
+5. AddMeme styling
 6. Styled Memes
-7. Styled Navigation
-8. Styled App
-8. README.MD
-9. AddMem check
-
+7. README.MD
 
 Done: 
 1. GlobalReducer map() instead of findIndex()
 2. Import CSS
 3. GH Pages
 4. AddMem height
-
-
+5. Styled Navigation
+6. Styled Header
 
 Code notes:
 globalReducer: findIndex: // const index = state.memes.findIndex((mem) => mem.id === action.payload);

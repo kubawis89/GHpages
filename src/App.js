@@ -3,11 +3,11 @@ import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import Header from "./components/Header/Header";
-import Memes from "./components/Memes/Memes";
-import HotMemes from "./components/HotMemes/HotMemes";
-import RegularMemes from "./components/RegularMemes/RegularMemes";
-import PoorMemes from "./components/PoorMemes/PoorMemes";
-import FavoriteMemes from "./components/FavoriteMemes/FavoriteMemes";
+import Memes from "./components/MemSection/Memes/Memes";
+import HotMemes from "./components/MemSection/HotMemes/HotMemes";
+import RegularMemes from "./components/MemSection/RegularMemes/RegularMemes";
+import PoorMemes from "./components/MemSection/PoorMemes/PoorMemes";
+import FavoriteMemes from "./components/MemSection/FavoriteMemes/FavoriteMemes";
 import AddMem from "./components/AddMem/AddMem";
 import Socials from "./components/Socials/Socials";
 import Footer from "./components/Footer/Footer";
@@ -48,6 +48,7 @@ function App() {
             <AddMem />
           </Route>
           <Route path="*">
+            <Redirect to="/error_404" />
             <ErrorPage />
           </Route>
         </Switch>

@@ -116,6 +116,7 @@
   padding: 100px 0 100px 0;
   width: 100%;
   min-width: 100px;
+  min-height: calc(100vh - 388px);
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

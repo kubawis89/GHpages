@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import MenuToggle from "./MenuToggle";
-import "./NarrowNavLinks.scss";
 
 const LinkContainer = styled.div`
   list-style-type: none;
@@ -12,6 +11,15 @@ const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: #1c74b2;
+  .nav-menu {
+    position: absolute;
+    left: -110%;
+    transition: all 0.5s ease;
+  }
+  .nav-menu.active {
+    left: 0;
+    z-index: 1;
+  }
 `;
 
 const LinkWrapper = styled.ul`
