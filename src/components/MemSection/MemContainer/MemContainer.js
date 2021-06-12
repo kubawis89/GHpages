@@ -24,7 +24,6 @@ function MemContainer({ sendedData }) {
           <section className="thumbs">
             <button
               className="button"
-              style={{ margin: "0 7px 0 0" }}
               onClick={() => {
                 const thumbsUpId = sendedData.id;
                 dispatch(addUpvote(thumbsUpId));
@@ -41,7 +40,6 @@ function MemContainer({ sendedData }) {
           <section className="thumbs">
             <button
               className="button"
-              style={{ margin: "0 7px 0 0" }}
               onClick={() => {
                 const thumbsDownId = sendedData.id;
                 dispatch(addDownvote(thumbsDownId));
@@ -91,6 +89,7 @@ function MemContainer({ sendedData }) {
         <div className="favorite">
           <button
             className="button"
+            style={{ margin: "0" }}
             onClick={() => {
               const favoriteMemId = sendedData.id;
               dispatch(favoriteMem(favoriteMemId));

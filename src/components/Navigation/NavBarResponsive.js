@@ -18,7 +18,7 @@ const NavContainer = styled.div`
   justify-content: center;
   margin: 0;
   padding: 10px 0;
-  @media only screen and (max-device-width: 319px) {
+  @media only screen and (max-width: 319px) {
     display: none;
   }
 `;

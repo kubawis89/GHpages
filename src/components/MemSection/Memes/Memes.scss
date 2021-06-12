@@ -18,6 +18,7 @@
     cursor: pointer;
     overflow: hidden;
     outline: none;
+    margin: 0 7px 0 0;
     &:hover {
       transform: scale(1.2, 1.2);
     }
@@ -215,7 +216,7 @@
   }
 }
 
-@media only screen and (max-device-width: 319px) {
+@media only screen and (max-width: 319px) {
   .memSection {
     display: none;
   }
