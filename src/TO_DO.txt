@@ -14,7 +14,7 @@ Done:
 4. AddMem height
 5. Styled Navigation
 6. Styled Header
-7. Additional MemSection component
+7. Additional MemContainer component
 
 Code notes:
 globalReducer: findIndex: // const index = state.memes.findIndex((mem) => mem.id === action.payload);
