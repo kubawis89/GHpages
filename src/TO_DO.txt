@@ -1,11 +1,11 @@
 TO DO:
-1. Additional Meme component
-2. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
-3. AddMem check
-4. Improve general css rules 
-5. AddMeme styling
-6. Styled Memes
-7. README.MD
+
+1. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
+2. AddMem check
+3. Improve general css rules 
+4. AddMeme styling
+5. Styled Memes
+6. README.MD
 
 Done: 
 1. GlobalReducer map() instead of findIndex()
@@ -14,6 +14,7 @@ Done:
 4. AddMem height
 5. Styled Navigation
 6. Styled Header
+7. Additional MemSection component
 
 Code notes:
 globalReducer: findIndex: // const index = state.memes.findIndex((mem) => mem.id === action.payload);

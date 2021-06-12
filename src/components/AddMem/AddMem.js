@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addMem } from "../../store/actions/globalActions";
-import { AddContainer, AddMain, Under320 } from "./styledAddMem";
+import { AddContainer, Under320 } from "./styledAddMem";
 
 function AddMem() {
   const dispatch = useDispatch();
