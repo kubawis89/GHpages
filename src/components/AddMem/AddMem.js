@@ -30,6 +30,8 @@ function AddMem() {
     setNewMemSource(false);
   };
 
+  const urlRegex = /(https?:\/\/.*\.(?:gif|jpe?g|tiff?|png|webp|bmp))/i;
+
   const newUrlMemData = {
     id: memDataFromState.memes.length + 1,
     title: newMemTitle,
@@ -103,17 +105,19 @@ function AddMem() {
             className={`${wwwImage ? "addButton" : "pathInactive"}`}
             onClick={() => {
               if (!newMemTitle && !newMemUrlPath) {
-                alert("Title and URL addres required");
+                alert("Title and URL address required");
               } else if (newMemTitle && !newMemUrlPath) {
-                alert("URL addres required");
+                alert("URL address required");
               } else if (newMemTitle && newMemUrlPath) {
-                const addedMem = newUrlMemData;
-                dispatch(addMem(addedMem));
-                setNewMemUrlPath("");
-                setNewMemTitle("");
-                setWwwSource(true);
-                alert("Mem added!");
-              } else return alert("Title required");
+                if (urlRegex.test(newMemUrlPath)) {
+                  const addedMem = newUrlMemData;
+                  dispatch(addMem(addedMem));
+                  setNewMemUrlPath("");
+                  setNewMemTitle("");
+                  setWwwSource(true);
+                  alert("Mem added!");
+                } else return alert("Wrong URL address");
+              } else alert("Title required");
             }}
           >
             ADD MEM!
@@ -132,7 +136,7 @@ function AddMem() {
                 setNewMemImgPath("");
                 setWwwSource(true);
                 alert("Mem added!");
-              } else return alert("Title required");
+              } else alert("Title required");
             }}
           >
             ADD MEM!

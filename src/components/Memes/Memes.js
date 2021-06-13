@@ -67,7 +67,9 @@ function Memes({ chosenPath }) {
 
   const memList = memDataFromState.memes
     .filter(filterCondition)
-    .map((filteredMem) => <MemContainer sendedData={filteredMem} />);
+    .map((filteredMem) => (
+      <MemContainer key={filteredMem.id} sendedData={filteredMem} />
+    ));
 
   return (
     <main>
