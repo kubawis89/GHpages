@@ -102,11 +102,18 @@ function AddMem() {
           <button
             className={`${wwwImage ? "addButton" : "pathInactive"}`}
             onClick={() => {
-              const addedMem = newUrlMemData;
-              dispatch(addMem(addedMem));
-              setNewMemUrlPath("");
-              setNewMemTitle("");
-              setWwwSource(true);
+              if (!newMemTitle && !newMemUrlPath) {
+                alert("Title and URL addres required");
+              } else if (newMemTitle && !newMemUrlPath) {
+                alert("URL addres required");
+              } else if (newMemTitle && newMemUrlPath) {
+                const addedMem = newUrlMemData;
+                dispatch(addMem(addedMem));
+                setNewMemUrlPath("");
+                setNewMemTitle("");
+                setWwwSource(true);
+                alert("Mem added!");
+              } else return alert("Title required");
             }}
           >
             ADD MEM!
@@ -114,10 +121,18 @@ function AddMem() {
           <button
             className={`${wwwImage ? "pathInactive" : "addButton"}`}
             onClick={() => {
-              const addedMem = newImgMemData;
-              dispatch(addMem(addedMem));
-              setNewMemTitle("");
-              setWwwSource(true);
+              if (!newMemTitle && !newMemImgPath) {
+                alert("Title and image file required");
+              } else if (newMemTitle && !newMemImgPath) {
+                alert("Image file required");
+              } else if (newMemTitle && newMemImgPath) {
+                const addedMem = newImgMemData;
+                dispatch(addMem(addedMem));
+                setNewMemTitle("");
+                setNewMemImgPath("");
+                setWwwSource(true);
+                alert("Mem added!");
+              } else return alert("Title required");
             }}
           >
             ADD MEM!

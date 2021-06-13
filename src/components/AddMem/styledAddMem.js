@@ -107,13 +107,9 @@ export const AddContainer = styled.div`
     width: 175px;
     padding: 5px 0;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: default;
     text-transform: uppercase;
     font-weight: 700;
-    &:hover {
-      background-color: #f48024;
-      transform: scale(1.02);
-    }
   }
   .buttonInactive {
     background-color: darkgray;
