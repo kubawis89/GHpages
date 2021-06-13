@@ -51,7 +51,7 @@ export const AddContainer = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 10px 0;
     font-size: 18px;
     width: 320px;
     height: 25px;
@@ -83,6 +83,7 @@ export const AddContainer = styled.div`
     width: 320px;
     height: 25px;
     color: black;
+    margin: 10px 0;
     &:hover {
       cursor: pointer;
       background: darkgray;
@@ -104,9 +105,11 @@ export const AddContainer = styled.div`
     font-size: 16px;
     margin: 10px 0;
     width: 175px;
-    padding: 2px 0;
+    padding: 5px 0;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
     &:hover {
       background-color: #f48024;
       transform: scale(1.02);
@@ -117,7 +120,7 @@ export const AddContainer = styled.div`
     font-size: 16px;
     margin: 10px 0;
     width: 175px;
-    padding: 2px 0;
+    padding: 5px 0;
     border-radius: 5px;
     cursor: pointer;
     &:hover {
@@ -165,6 +168,8 @@ export const AddContainer = styled.div`
       font-size: 14px;
       width: 150px;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 700;
     }
     .buttonInactive {
       font-size: 14px;
@@ -209,6 +214,8 @@ export const AddContainer = styled.div`
     .buttonActive {
       font-size: 12px;
       width: 90px;
+      text-transform: uppercase;
+      font-weight: 700;
     }
     .buttonInactive {
       font-size: 12px;
