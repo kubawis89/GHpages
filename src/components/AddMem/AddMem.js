@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addMem } from "../../store/actions/globalActions";
-import { AddContainer, Under320 } from "./styledAddMem";
+import { AddContainer, Under320px } from "./styledAddMem";
 
 function AddMem() {
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ function AddMem() {
 
   return (
     <main>
-      <Under320>Go get some bigger screen!</Under320>
+      <Under320px>Go get some bigger screen!</Under320px>
       <AddContainer>
         <h1>Go ahead, share some meme!</h1>
         <p>Just fill in the necessary data: </p>
@@ -70,13 +70,13 @@ function AddMem() {
             className={`${wwwImage ? "buttonActive" : "buttonInactive"}`}
             onClick={setWwwSource}
           >
-            From the Internet
+            From URL
           </button>
           <button
             className={`${wwwImage ? "buttonInactive" : "buttonActive"}`}
             onClick={setHddSource}
           >
-            From your PC
+            From file
           </button>
         </div>
         <div className="input">

@@ -13,7 +13,6 @@ export const Under320px = styled.div`
   margin: 0;
   padding: 100px 0 100px 0;
   width: 100%;
-  min-height: calc(100vh - 388px);
   @media only screen and (max-width: 319px) {
     display: inline-block;
     min-height: calc(100vh - 545px);

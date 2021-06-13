@@ -3,8 +3,8 @@ TO DO:
 1. AddMem check
 3. AddMeme styling
 4. README.MD
-
-5. GENERAL CHECK AT 20:00
+5. GHPages and new repo
+5. GENERAL CHECK AT 22:00
 
 Done: 
 1. GlobalReducer map() instead of findIndex()
