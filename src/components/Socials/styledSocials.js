@@ -10,15 +10,13 @@ export const SocialsDiv = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 2;
-
-  @media only screen and (max-device-width: 319px) {
+  @media only screen and (max-width: 319px) {
     margin: 0;
   }
 `;
 
 export const SocialMedia = styled.div`
   width: 640px;
-  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -68,10 +66,9 @@ export const SocialMedia = styled.div`
     }
   }
 
-  @media only screen and (max-device-width: 319px) {
+  @media only screen and (max-width: 319px) {
     flex-direction: column;
     width: 100%;
-    min-width: 100px;
     .iconJS, .iconFont, .iconStack, .iconGit, .iconReact {
       margin: 5px;
     }

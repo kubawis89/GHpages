@@ -1,11 +1,10 @@
 TO DO:
 
-1. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
-2. AddMem check
-3. Improve general css rules 
-4. AddMeme styling
-5. Styled Memes
-6. README.MD
+1. AddMem check
+3. AddMeme styling
+4. README.MD
+
+5. GENERAL CHECK AT 20:00
 
 Done: 
 1. GlobalReducer map() instead of findIndex()
@@ -15,6 +14,6 @@ Done:
 5. Styled Navigation
 6. Styled Header
 7. Additional MemContainer component
-
-Code notes:
-globalReducer: findIndex: // const index = state.memes.findIndex((mem) => mem.id === action.payload);
+8. One component ShowMemes instead of Hot/Regular/Poor/Favourite/Memes 
+9. Styled MemContainer
+10. Improve general css rules 

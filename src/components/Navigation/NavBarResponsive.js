@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import NavLinks from "./NavLinks/NavLinks";
 import { useMediaQuery } from "react-responsive";
-import NarrowNavLinks from "./NavLinks/NarrowNavLinks";
 import { useLocation } from "react-router-dom";
 
+import NavLinks from "./NavLinks/NavLinks";
+import NarrowNavLinks from "./NavLinks/NarrowNavLinks";
+
+import styled from "styled-components";
+
 const NavContainer = styled.div`
-  position: sticky !important;
+  position: sticky;
   top: -1px;
   width: 100%;
   min-width: 320px;
@@ -23,6 +25,12 @@ const NavContainer = styled.div`
   }
 `;
 
+const NarrowScreen = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 const ActiveLinkSection = styled.div`
   width: 90%;
   text-align: center;
@@ -37,12 +45,6 @@ const WideScreenMenu = styled.div`
   display: flex;
 `;
 
-const NarrowScreen = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`;
-
 const ActivePath = styled.p`
   width: 100%;
   color: #0a2b42;
@@ -55,12 +57,11 @@ const ActivePath = styled.p`
 }
 `;
 
-function NavBarResponsive(props) {
+function NavBarResponsive() {
   const isMobile = useMediaQuery({ maxWidth: "680px" });
+  const location = useLocation();
 
   const [isClose, setClose] = useState(true);
-
-  const location = useLocation();
 
   return (
     <NavContainer>

@@ -1,16 +1,17 @@
 import React from "react";
-import { SocialsDiv, SocialMedia } from "./styledSocials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { SocialsDiv, SocialMedia } from "./styledSocials";
 
 function Socials() {
   return (
     <SocialsDiv>
       <SocialMedia>
-        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
+        <a href="https://stackoverflow.com" rel="noreferrer" target="_blank">
           <FontAwesomeIcon
-            className="iconReact"
-            icon={["fab", "react"]}
-            size="4x"
+            className="iconStack"
+            icon={["fab", "stack-overflow"]}
+            size="3x"
           />
         </a>
         <a href="https://github.com" rel="noreferrer" target="_blank">
@@ -20,10 +21,10 @@ function Socials() {
             size="3x"
           />
         </a>
-        <a href="https://stackoverflow.com" rel="noreferrer" target="_blank">
+        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
           <FontAwesomeIcon
-            className="iconStack"
-            icon={["fab", "stack-overflow"]}
+            className="iconReact"
+            icon={["fab", "react"]}
             size="3x"
           />
         </a>

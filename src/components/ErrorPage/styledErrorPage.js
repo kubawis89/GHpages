@@ -18,4 +18,32 @@ export const ErrorDiv = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 319px) {
+    margin: 30px 0 30px 0;
+    h1 {
+      font-size: 35px;
+    }
+    img {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    margin: 30px 0 30px 0;
+    h1 {
+      font-size: 45px;
+    }
+    img {
+      width: 320px;
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 680px) {
+    margin: 30px 0 30px 0;
+    h1 {
+      font-size: 45px;
+    }
+    img {
+      width: 480px;
+    }
+  }
 `;

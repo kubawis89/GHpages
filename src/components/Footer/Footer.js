@@ -9,11 +9,7 @@ const StyledFooter = styled.footer`
 `;
 
 function Footer() {
-  return (
-    <StyledFooter>
-      <p>Copyright &reg; by WSB students 2020/2021</p>
-    </StyledFooter>
-  );
+  return <StyledFooter>Copyright &reg; by WSB students 2020/2021</StyledFooter>;
 }
 
 export default Footer;

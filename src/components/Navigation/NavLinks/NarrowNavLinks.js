@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+
 import MenuToggle from "./MenuToggle";
 
+import styled from "styled-components";
+
 const LinkContainer = styled.div`
-  list-style-type: none;
   font-size: 18px;
   height: 35px;
   line-height: 200%;
@@ -70,76 +71,33 @@ const LinkItem = styled.li`
 function NarrowNavLinks(props) {
   const [isOpen, setOpen] = useState(false);
 
+  const useMenu = () => {
+    setOpen(!isOpen);
+    props.sendToggle(isOpen);
+  };
+
   return (
     <LinkContainer>
-      <MenuToggle
-        isOpen={isOpen}
-        toggle={() => {
-          setOpen(!isOpen);
-          props.sendToggle(isOpen);
-        }}
-      />
+      <MenuToggle isOpen={isOpen} toggle={useMenu} />
       <div className={isOpen ? "nav-menu active" : "nav-menu"}>
         <LinkWrapper>
           <NavLink to="/home">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Home
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Home</LinkItem>
           </NavLink>
           <NavLink to="/hot">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Hot
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Hot</LinkItem>
           </NavLink>
           <NavLink to="/regular">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Regular
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Regular</LinkItem>
           </NavLink>
           <NavLink to="/poor">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Poor
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Poor</LinkItem>
           </NavLink>
           <NavLink to="/favorite">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Favorite
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Favorite</LinkItem>
           </NavLink>
           <NavLink to="/add">
-            <LinkItem
-              onClick={() => {
-                setOpen(!isOpen);
-                props.sendToggle(isOpen);
-              }}
-            >
-              Add
-            </LinkItem>
+            <LinkItem onClick={useMenu}>Add</LinkItem>
           </NavLink>
         </LinkWrapper>
       </div>

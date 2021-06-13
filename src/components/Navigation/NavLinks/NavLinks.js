@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 
 const LinkContainer = styled.div`
-  list-style-type: none;
   font-size: 18px;
   height: 35px;
   line-height: 200%;
@@ -13,9 +13,6 @@ const LinkContainer = styled.div`
 
 const LinkWrapper = styled.ul`
   list-style-type: none;
-  font-size: 18px;
-  height: 35px;
-  line-height: 200%;
   display: flex;
   align-items: center;
   &:first-child {

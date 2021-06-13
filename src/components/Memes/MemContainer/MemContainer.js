@@ -7,11 +7,21 @@ import {
   favoriteMem,
 } from "../../../store/actions/globalActions";
 
+import {
+  MemSection,
+  Assesment,
+  Vote,
+  Thumbs,
+  Button,
+  VoteResult,
+  Favorite,
+} from "./styledMemContainer.js";
+
 function MemContainer({ sendedData }) {
   const dispatch = useDispatch();
 
   return (
-    <div key={sendedData.id} className="memSection">
+    <MemSection key={sendedData.id}>
       <h2>{sendedData.title}</h2>
       <img
         className="memImg"
@@ -19,11 +29,10 @@ function MemContainer({ sendedData }) {
         width="600"
         alt={sendedData.title}
       ></img>
-      <div className="assesment">
-        <div className="vote">
-          <section className="thumbs">
-            <button
-              className="button"
+      <Assesment>
+        <Vote>
+          <Thumbs>
+            <Button
               onClick={() => {
                 const thumbsUpId = sendedData.id;
                 dispatch(addUpvote(thumbsUpId));
@@ -34,12 +43,11 @@ function MemContainer({ sendedData }) {
                 width="30"
                 alt="Upvotes"
               />
-            </button>
+            </Button>
             {sendedData.upvotes}
-          </section>
-          <section className="thumbs">
-            <button
-              className="button"
+          </Thumbs>
+          <Thumbs>
+            <Button
               onClick={() => {
                 const thumbsDownId = sendedData.id;
                 dispatch(addDownvote(thumbsDownId));
@@ -50,11 +58,11 @@ function MemContainer({ sendedData }) {
                 width="30"
                 alt="Downvotes"
               />
-            </button>
+            </Button>
             {sendedData.downvotes}
-          </section>
-        </div>
-        <div className="voteResult">
+          </Thumbs>
+        </Vote>
+        <VoteResult>
           <span
             className={`${
               sendedData.upvotes - sendedData.downvotes > 4 ? "hot" : "span1"
@@ -85,10 +93,9 @@ function MemContainer({ sendedData }) {
               Poor
             </NavLink>
           </span>
-        </div>
-        <div className="favorite">
-          <button
-            className="button"
+        </VoteResult>
+        <Favorite>
+          <Button
             style={{ margin: "0" }}
             onClick={() => {
               const favoriteMemId = sendedData.id;
@@ -107,10 +114,10 @@ function MemContainer({ sendedData }) {
                 sendedData.favorite ? "Remove from favorite" : "Add to favorite"
               }`}
             />
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Favorite>
+      </Assesment>
+    </MemSection>
   );
 }
 
