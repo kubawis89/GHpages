@@ -20,6 +20,12 @@ export const Under320px = styled.div`
   }
 `;
 
+export const TextDiv = styled.div`
+  @media only screen and (max-width: 319px) {
+    display: none;
+  }
+`;
+
 function Memes({ chosenPath }) {
   const memDataFromState = useSelector((state) => state);
   let divText;
@@ -67,7 +73,7 @@ function Memes({ chosenPath }) {
   return (
     <main>
       <Under320px>Go get some bigger screen!</Under320px>
-      {memList.length ? <div>{memList}</div> : <div>{divText}</div>}
+      {memList.length ? <div>{memList}</div> : <TextDiv>{divText}</TextDiv>}
     </main>
   );
 }
