@@ -21,7 +21,7 @@ function MemContainer({ sendedData }) {
   const dispatch = useDispatch();
 
   return (
-    <MemSection key={sendedData.id}>
+    <MemSection>
       <h2>{sendedData.title}</h2>
       <img
         className="memImg"
@@ -100,7 +100,6 @@ function MemContainer({ sendedData }) {
             onClick={() => {
               const favoriteMemId = sendedData.id;
               dispatch(favoriteMem(favoriteMemId));
-              console.log(window.pageYOffset);
             }}
           >
             <img

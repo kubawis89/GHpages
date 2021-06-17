@@ -32,22 +32,13 @@ function AddMem() {
 
   const urlRegex = /(https?:\/\/.*\.(?:gif|jpe?g|tiff?|png|webp|bmp))/i;
 
-  const newUrlMemData = {
+  const newMemData = {
     id: memDataFromState.memes.length + 1,
     title: newMemTitle,
     upvotes: 0,
     downvotes: 0,
     favorite: false,
-    img: newMemUrlPath,
-  };
-
-  const newImgMemData = {
-    id: memDataFromState.memes.length + 1,
-    title: newMemTitle,
-    upvotes: 0,
-    downvotes: 0,
-    favorite: false,
-    img: newMemImgPath,
+    img: newMemUrlPath ? newMemUrlPath : newMemImgPath,
   };
 
   return (
@@ -110,7 +101,7 @@ function AddMem() {
                 alert("URL address required");
               } else if (newMemTitle && newMemUrlPath) {
                 if (urlRegex.test(newMemUrlPath)) {
-                  const addedMem = newUrlMemData;
+                  const addedMem = newMemData;
                   dispatch(addMem(addedMem));
                   setNewMemUrlPath("");
                   setNewMemTitle("");
@@ -130,7 +121,7 @@ function AddMem() {
               } else if (newMemTitle && !newMemImgPath) {
                 alert("Image file required");
               } else if (newMemTitle && newMemImgPath) {
-                const addedMem = newImgMemData;
+                const addedMem = newMemData;
                 dispatch(addMem(addedMem));
                 setNewMemTitle("");
                 setNewMemImgPath("");
